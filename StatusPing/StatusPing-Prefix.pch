@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'StatusPing' target in the 'StatusPing' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
