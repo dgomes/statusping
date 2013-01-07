@@ -7,21 +7,24 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#include "SimplePing.h"
+#import "PingDelegate.h"
+#import "PreferencesDelegate.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, SimplePingDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
 @property (strong, nonatomic) IBOutlet NSMenu *statusMenu;
-@property (strong) IBOutlet NSButton *setButton;
-@property (strong, retain) IBOutlet NSTextField *addressInput;
-@property (strong) IBOutlet NSMenuItem *ipaddress;
 @property (strong, nonatomic) NSStatusItem *statusBar;
 
-@property (strong, atomic) NSString *address;
+@property (assign) IBOutlet NSWindow *preferencesWindow;
+@property (strong) IBOutlet NSMenuItem *statusInfo;
 
-@property (nonatomic, strong, readwrite) SimplePing *   pinger;
-@property (nonatomic, strong, readwrite) NSTimer *      sendTimer;
-@property (atomic, readwrite) NSInteger unreceivedReplys;
+@property PreferencesDelegate *preferences;
+@property PingDelegate *pingDelegate;
+
+- (void)setInfo:(NSString *)info icon:(NSString *) unicodestr;
 
 @end
+
+
+
+
