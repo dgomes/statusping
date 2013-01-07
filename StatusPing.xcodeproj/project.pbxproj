@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		998530FA169B68A2005F938A /* PingDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 998530F9169B68A2005F938A /* PingDelegate.m */; };
+		99A85B2F169A4FCC002A152A /* PreferencesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A85B2E169A4FCC002A152A /* PreferencesDelegate.m */; };
 		99E84BE31694D46200E73349 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E84BE21694D46200E73349 /* Cocoa.framework */; };
 		99E84BED1694D46200E73349 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99E84BEB1694D46200E73349 /* InfoPlist.strings */; };
 		99E84BEF1694D46200E73349 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E84BEE1694D46200E73349 /* main.m */; };
 		99E84BF31694D46200E73349 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 99E84BF11694D46200E73349 /* Credits.rtf */; };
 		99E84BF61694D46200E73349 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E84BF51694D46200E73349 /* AppDelegate.m */; };
 		99E84BF91694D46200E73349 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E84BF71694D46200E73349 /* MainMenu.xib */; };
+		99E84C011694EFD500E73349 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E84C001694EFD500E73349 /* SimplePing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		998530F8169B68A2005F938A /* PingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingDelegate.h; sourceTree = "<group>"; };
+		998530F9169B68A2005F938A /* PingDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingDelegate.m; sourceTree = "<group>"; };
+		99A85B2D169A4FCC002A152A /* PreferencesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesDelegate.h; sourceTree = "<group>"; };
+		99A85B2E169A4FCC002A152A /* PreferencesDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesDelegate.m; sourceTree = "<group>"; };
 		99E84BDE1694D46200E73349 /* StatusPing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatusPing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E84BE21694D46200E73349 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		99E84BE51694D46200E73349 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -29,6 +36,8 @@
 		99E84BF41694D46200E73349 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		99E84BF51694D46200E73349 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		99E84BF81694D46200E73349 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		99E84BFF1694EFD500E73349 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		99E84C001694EFD500E73349 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +91,15 @@
 		99E84BE81694D46200E73349 /* StatusPing */ = {
 			isa = PBXGroup;
 			children = (
+				99E84BFF1694EFD500E73349 /* SimplePing.h */,
+				99E84C001694EFD500E73349 /* SimplePing.m */,
 				99E84BF41694D46200E73349 /* AppDelegate.h */,
 				99E84BF51694D46200E73349 /* AppDelegate.m */,
+				998530F8169B68A2005F938A /* PingDelegate.h */,
+				998530F9169B68A2005F938A /* PingDelegate.m */,
 				99E84BF71694D46200E73349 /* MainMenu.xib */,
+				99A85B2D169A4FCC002A152A /* PreferencesDelegate.h */,
+				99A85B2E169A4FCC002A152A /* PreferencesDelegate.m */,
 				99E84BE91694D46200E73349 /* Supporting Files */,
 			);
 			path = StatusPing;
@@ -168,6 +183,9 @@
 			files = (
 				99E84BEF1694D46200E73349 /* main.m in Sources */,
 				99E84BF61694D46200E73349 /* AppDelegate.m in Sources */,
+				99E84C011694EFD500E73349 /* SimplePing.m in Sources */,
+				99A85B2F169A4FCC002A152A /* PreferencesDelegate.m in Sources */,
+				998530FA169B68A2005F938A /* PingDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +279,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StatusPing/StatusPing-Prefix.pch";
 				INFOPLIST_FILE = "StatusPing/StatusPing-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -273,6 +292,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StatusPing/StatusPing-Prefix.pch";
 				INFOPLIST_FILE = "StatusPing/StatusPing-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -297,6 +317,7 @@
 				99E84BFE1694D46200E73349 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
