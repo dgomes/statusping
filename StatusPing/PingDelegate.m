@@ -203,7 +203,7 @@
         _sendTimer = nil;
     }
     
-    [[NSApp delegate] setInfo:address icon:@"⚡"];
+    [[NSApp delegate] setInfo:address icon:@"🌍"];
     
     [NSThread detachNewThreadSelector:@selector(runInBackground:) toTarget:self withObject:address];
 }

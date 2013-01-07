@@ -55,7 +55,7 @@
 
     self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
 
-    self.statusBar.title = @"⚡";
+    self.statusBar.title = @"🌍";
     
     // you can also set an image
     //self.statusBar.image =
