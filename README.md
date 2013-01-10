@@ -12,3 +12,8 @@ Screenshots
 
 ![Connected and Preferences](http://i.imgur.com/5nGkz.png?1)
 ![Timeout](http://i.imgur.com/5kzPK.png?1)
+
+Download
+========
+
+[ver1.0](https://dl.dropbox.com/u/991907/StatusPing/StatusPing.1.0.zip)
