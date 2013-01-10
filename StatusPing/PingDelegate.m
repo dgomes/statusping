@@ -146,6 +146,8 @@
     
     if(self.state == AppStateTimeout) {
         self.state = AppStateTimeout;
+    } else if(self.state == AppStateError) {
+        self.state = AppStateError;
     }else if(self.state == AppStatePingSent) {
         [[NSApp delegate] setInfo:@"Packets are being lost!" icon:@"⛔"];
         self.state = AppStateTimeout;
@@ -178,8 +180,10 @@
 #pragma unused(packet)
     NSLog(@"#%u received", (unsigned int) OSSwapBigToHostInt16([SimplePing icmpInPacket:packet]->sequenceNumber) );
     
+    NSLog(@"state = %ld", self.state);
+    
     if(self.state != AppStatePingSent) {
-        [[NSApp delegate] setInfo:[self displayAddressForAddress:pinger.hostAddress] icon:@"⚡"];
+        [[NSApp delegate] setInfo:[self displayAddressForAddress:pinger.hostAddress] icon:@"🌍"];
     }
     self.state = AppStatePingReceived;
 }

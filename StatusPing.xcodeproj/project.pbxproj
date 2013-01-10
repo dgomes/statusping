@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9930AC3B169EE1EB003C16DA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9930AC3A169EE1EB003C16DA /* icon.png */; };
+		9930AC3E169EE269003C16DA /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9930AC3D169EE269003C16DA /* icon.icns */; };
 		998530FA169B68A2005F938A /* PingDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 998530F9169B68A2005F938A /* PingDelegate.m */; };
 		99A85B2F169A4FCC002A152A /* PreferencesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A85B2E169A4FCC002A152A /* PreferencesDelegate.m */; };
 		99E84BE31694D46200E73349 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E84BE21694D46200E73349 /* Cocoa.framework */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9930AC3A169EE1EB003C16DA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		9930AC3D169EE269003C16DA /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		998530F8169B68A2005F938A /* PingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingDelegate.h; sourceTree = "<group>"; };
 		998530F9169B68A2005F938A /* PingDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingDelegate.m; sourceTree = "<group>"; };
 		99A85B2D169A4FCC002A152A /* PreferencesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesDelegate.h; sourceTree = "<group>"; };
@@ -55,6 +59,8 @@
 		99E84BD31694D46200E73349 = {
 			isa = PBXGroup;
 			children = (
+				9930AC3D169EE269003C16DA /* icon.icns */,
+				9930AC3A169EE1EB003C16DA /* icon.png */,
 				99E84BE81694D46200E73349 /* StatusPing */,
 				99E84BE11694D46200E73349 /* Frameworks */,
 				99E84BDF1694D46200E73349 /* Products */,
@@ -171,6 +177,8 @@
 				99E84BED1694D46200E73349 /* InfoPlist.strings in Resources */,
 				99E84BF31694D46200E73349 /* Credits.rtf in Resources */,
 				99E84BF91694D46200E73349 /* MainMenu.xib in Resources */,
+				9930AC3B169EE1EB003C16DA /* icon.png in Resources */,
+				9930AC3E169EE269003C16DA /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
