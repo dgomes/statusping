@@ -142,7 +142,9 @@
 #pragma unused(pinger)
     assert(pinger == self.pinger);
 #pragma unused(packet)
+#ifdef DEBUG
     NSLog(@"#%u sent", (unsigned int) OSSwapBigToHostInt16(((const ICMPHeader *) [packet bytes])->sequenceNumber) );
+#endif
     
     if(self.state == AppStateTimeout) {
         self.state = AppStateTimeout;
@@ -178,9 +180,9 @@
 #pragma unused(pinger)
     assert(pinger == self.pinger);
 #pragma unused(packet)
+#ifdef DEBUG
     NSLog(@"#%u received", (unsigned int) OSSwapBigToHostInt16([SimplePing icmpInPacket:packet]->sequenceNumber) );
-    
-    NSLog(@"state = %ld", self.state);
+#endif
     
     if(self.state != AppStatePingSent) {
         [[NSApp delegate] setInfo:[self displayAddressForAddress:pinger.hostAddress] icon:@"🌍"];
