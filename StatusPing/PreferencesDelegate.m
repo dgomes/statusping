@@ -23,6 +23,7 @@
 }
 
 - (void)windowDidBecomeMain:(NSNotification *)notification {
+    NSLog(@"Loading UserDefaults %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"StatusPing_address"]);
     [_addressInput setStringValue: [[NSUserDefaults standardUserDefaults] stringForKey:@"StatusPing_address"]];
     [_intervalInput setStringValue: [[NSUserDefaults standardUserDefaults] stringForKey:@"StatusPing_interval"]];
 }

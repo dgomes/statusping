@@ -62,22 +62,30 @@
     
     self.statusBar.menu = self.statusMenu;
     self.statusBar.highlightMode = YES;
-    
+
     [_preferencesWindow setReleasedWhenClosed:FALSE];
-    [_preferencesWindow center];
-    
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
-    if([[NSUserDefaults standardUserDefaults] stringForKey:@"StatusPing_address"]==nil)
+    BOOL openprefs = FALSE;
+    if([[NSUserDefaults standardUserDefaults] stringForKey:@"StatusPing_address"]==nil) {
         [[NSUserDefaults standardUserDefaults] setObject:@"8.8.8.8" forKey:@"StatusPing_address"];
+        openprefs = TRUE;
+    }
 
     if([[NSUserDefaults standardUserDefaults] stringForKey:@"StatusPing_interval"]==nil)
         [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"StatusPing_interval"];
 
-
+    if(openprefs) {
+        // wait for user preferences
+        [self openPreferences:nil];
+    } else {
+        //Start pinging
+        [[[NSApp delegate] pingDelegate]
+            startPingLoop:[[NSUserDefaults standardUserDefaults] stringForKey:@"StatusPing_address"]
+            interval:[[[NSUserDefaults standardUserDefaults] stringForKey:@"StatusPing_interval"] floatValue]];
+    }
 }
 
 @end
