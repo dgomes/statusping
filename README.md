@@ -16,4 +16,4 @@ Screenshots
 Download
 ========
 
-[ver1.0](https://dl.dropbox.com/u/991907/StatusPing/StatusPing.1.0.zip)
+[ver1.1](http://goo.gl/MkA2B)
